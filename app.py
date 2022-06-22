@@ -4,15 +4,15 @@ import predict
 app = Flask(__name__)
 
 
-categories = [
-    'alt.atheism',
-    'comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware', 'comp.sys.mac.hardware', 'comp.windows.x',
-    'misc.forsale',
-    'rec.autos', 'rec.motorcycles', 'rec.sport.baseball', 'rec.sport.hockey',
-    'sci.crypt', 'sci.electronics', 'sci.med', 'sci.space',
-    'soc.religion.christian',
-    'talk.politics.guns', 'talk.politics.mideast', 'talk.politics.misc', 'talk.religion.misc'
-]
+categories = {
+    'alt.atheism' : 'Atheism','comp.graphics' : 'Graphics', 'comp.os.ms-windows.misc' : 'OS-Windows' ,
+    'comp.sys.ibm.pc.hardware' : 'Hardware-IBM','comp.sys.mac.hardware' : 'Hardware-MAC', 'comp.windows.x' : 'Windows-X',
+    'misc.forsale' : 'For Sale','rec.autos' : 'Automobile', 'rec.motorcycles' : 'Motorcycle', 'rec.sport.baseball' : 'Baseball',
+    'rec.sport.hockey' : 'Hockey',
+    'sci.crypt' : 'Science - Crypt', 'sci.electronics' : 'Electronics', 'sci.med' : 'Science-Medical', 'sci.space' : 'Science-Space',
+    'soc.religion.christian' : 'Religion-Christian',
+    'talk.politics.guns' : 'Guns', 'talk.politics.mideast' : 'MidEast', 'talk.politics.misc' : 'Politics', 'talk.religion.misc' : 'Religion'
+}
 
 
 @app.route('/' , methods=['GET' , 'POST'])
